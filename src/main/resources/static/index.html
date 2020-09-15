@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<span id="result"></span>
+
+<script>
+    var source = new EventSource("/async");
+    source.onmessage = function(event) {
+        document.getElementById("result").innerText = (event.data);
+    };
+</script>
+</body>
+</html>
